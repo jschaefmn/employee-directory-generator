@@ -8,7 +8,6 @@ const Engineer = require('./lib/Engineer');
 
 const fs = require('fs');
 const inquirer = require('inquirer');
-
 // team array
 const teamArrary = [];
 
@@ -46,7 +45,7 @@ const addManager = () => {
       name: 'email',
       message: "Please enter the manager's email.",
       validate: email => {
-        valid = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/.test(email)
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
         if (valid) {
           return true;
         } else {
@@ -192,7 +191,7 @@ const addEmployee = () => {
 
 // generate HTML file using file system
 const writeFile = data => {
-  fs.writeFile('./dist.index.html', data, err => {
+  fs.writeFile('./dist/index.html', data, err => {
     if (err) {
       console.log(err);
       return;
