@@ -5,7 +5,7 @@ const generateManager = function (manager) {
     <div class="card h-100">
       <div class="card-header">
         <h3>${manager.name}</h3>
-        <h4>Manager</h4><<i class="fas fa-male"></i>
+        <h4>Manager</h4><i class="fas fa-male"></i>
       </div>
 
       <div class="card-body">
@@ -31,9 +31,9 @@ const generateEngineer = function (engineer) {
         <div class="card-body">
           <p class="id">ID: ${engineer.id}</p>
           <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-          p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+          <p class="github">GitHub: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
         </div>
-      </div
+      </div>
     </div>
   `;
 };

@@ -9,7 +9,7 @@ const Engineer = require('./lib/Engineer');
 const fs = require('fs');
 const inquirer = require('inquirer');
 // team array
-const teamArrary = [];
+const teamArray = [];
 
 // start manager prompts
 const addManager = () => {
@@ -17,7 +17,7 @@ const addManager = () => {
     {
       type: 'input',
       name: 'name',
-      message: 'Whos is the manager of this team?',
+      message: 'Who is the manager of this team?',
       validate: nameInput => {
         if (nameInput) {
           return true;
@@ -50,7 +50,7 @@ const addManager = () => {
           return true;
         } else {
           console.log('Please enter a valid email to continue.')
-          return false
+          return false;
         }
       }
     },
@@ -72,7 +72,7 @@ const addManager = () => {
       const { name, id, email, officeNumber } = managerInput;
       const manager = new Manager(name, id, email, officeNumber);
 
-      teamArrary.push(manager);
+      teamArray.push(manager);
       console.log(manager);
     })
 };
@@ -107,6 +107,7 @@ const addEmployee = () => {
     },
     {
       type: 'input',
+      name: 'id',
       message: "Enter the employee's ID.",
       validate: nameInput => {
         if (isNaN(nameInput)) {
@@ -161,6 +162,7 @@ const addEmployee = () => {
       type: 'confirm',
       name: 'confirmAddEmployee',
       message: 'Would you like to add another team memeber?',
+      default: false
     }
   ])
     .then(employeeData => {
@@ -179,12 +181,12 @@ const addEmployee = () => {
         console.log(employee);
       }
 
-      teamArrary.push(employee);
+      teamArray.push(employee);
 
       if (confirmAddEmployee) {
-        return addEmployee(teamArrary);
+        return addEmployee(teamArray);
       } else {
-        return teamArrary;
+        return teamArray;
       }
     })
 };
