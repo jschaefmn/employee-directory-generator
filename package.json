@@ -1,0 +1,26 @@
+{
+  "name": "employee-directory-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jschaefmn/employee-directory-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jschaefmn/employee-directory-generator/issues"
+  },
+  "homepage": "https://github.com/jschaefmn/employee-directory-generator#readme",
+  "dependencies": {
+    "inquirer": "^9.0.0",
+    "jest": "^28.1.2"
+  }
+}
