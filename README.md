@@ -14,3 +14,5 @@ Once all the prompts are complete and the user doesn't want to add anymore emplo
 
 ## Demonstration Video
 
+https://user-images.githubusercontent.com/26747028/177232342-ec051f43-2c24-45c8-a553-6e0b1ec18563.mp4
+
